@@ -1,6 +1,7 @@
 package classes;
 
 import java.sql.Date;
+import java.sql.Time;
 
 public class Agendamento {
 
@@ -8,7 +9,8 @@ public class Agendamento {
 	private Cliente cliente;
 	private Medico medico;
 	private Date dataConsulta;
-	private Date horarioConsulta;
+	private Time horarioConsulta;
+	
 	public int getId() {
 		return id;
 	}
@@ -33,10 +35,10 @@ public class Agendamento {
 	public void setDataConsulta(Date dataConsulta) {
 		this.dataConsulta = dataConsulta;
 	}
-	public Date getHorarioConsulta() {
+	public Time getHorarioConsulta() {
 		return horarioConsulta;
 	}
-	public void setHorarioConsulta(Date horarioConsulta) {
+	public void setHorarioConsulta(Time horarioConsulta) {
 		this.horarioConsulta = horarioConsulta;
 	}
 	

@@ -13,7 +13,7 @@ public class ConnectionFactory {
 			Class.forName("com.mysql.jdbc.Driver");
 			
 			return DriverManager.getConnection(
-					"jdbc:mysql://localhost/projeto",
+					"jdbc:mysql://localhost/trabalhoum",
 					"root",
 					""
 					);
