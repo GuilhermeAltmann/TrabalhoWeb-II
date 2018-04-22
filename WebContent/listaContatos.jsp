@@ -10,7 +10,7 @@
 				<h2>Lista de Clientes</h2>
 			</div>
 			<div class="col">
-				<a class="btn btn-success  float-right" href="cadastroCliente.jsp" role="button">Adicionar Cliente</a>
+				<a class="btn btn-success  float-right" href="cadastroContato.jsp" role="button">Adicionar Contato</a>
 			</div>
 		</div>
 		<div class="row">
@@ -19,20 +19,22 @@
 					<thead>
 						<tr>
 							<th scope="col">Nome</th>
-							<th scope="col">CPF</th>
+							<th scope="col">Email</th>
+							<th scope="col">Telefone</th>
 							<th scope="col">Alterar</th>
 							<th scope="col">Excluir</th>
 						</tr>
 					</thead>
 					<tbody>
 						<%
-							ClienteDao dao = new ClienteDao();
-							List<Cliente> clientes = dao.getLista();
-							for (Cliente cli : clientes) {
+							ContatoDao dao = new ContatoDao();
+							List<Contato> contatos = dao.getLista();
+							for (Contato con : contatos) {
 						%>
 						<tr>
-							<td><%=cli.getPessoa().getNome()%></td>
-							<td><%=cli.getPessoa().getCpf()%></td>
+							<td><%=con.getPessoa().getNome()%></td>
+							<td><%=con.getEmail()%></td>
+							<td><%=con.getTelefone()%></td>
 							<td></td>
 							<td></td>
 						</tr>

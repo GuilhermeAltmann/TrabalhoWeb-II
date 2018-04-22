@@ -14,7 +14,7 @@ import dao.ClienteDao;
 import dao.ContatoDao;
 
 
-@WebServlet("/cadastrarcliente")
+@WebServlet("/cadastrarcontato")
 public class CadastrarContato extends HttpServlet{
 
 	@Override
