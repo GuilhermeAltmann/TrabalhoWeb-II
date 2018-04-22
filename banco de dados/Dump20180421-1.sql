@@ -27,12 +27,12 @@ CREATE TABLE `agendamentos` (
   `data_consulta` date NOT NULL,
   `hora_consulta` time NOT NULL,
   `idcliente` int(10) unsigned NOT NULL,
-  `medicos_idmedico` int(10) unsigned NOT NULL,
+  `idmedico` int(10) unsigned NOT NULL,
   PRIMARY KEY (`idagendamento`),
   KEY `fk_agendamentos_clientes_idx` (`idcliente`),
-  KEY `fk_agendamentos_medicos1_idx` (`medicos_idmedico`),
+  KEY `fk_agendamentos_medicos1_idx` (`idmedico`),
   CONSTRAINT `fk_agendamentos_clientes` FOREIGN KEY (`idcliente`) REFERENCES `clientes` (`idcliente`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_agendamentos_medicos1` FOREIGN KEY (`medicos_idmedico`) REFERENCES `medicos` (`idmedico`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_agendamentos_medicos1` FOREIGN KEY (`idmedico`) REFERENCES `medicos` (`idmedico`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,7 +54,10 @@ DROP TABLE IF EXISTS `clientes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `clientes` (
   `idcliente` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`idcliente`)
+  `idpessoa` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`idcliente`),
+  KEY `fk_clientes_pessoas1_idx` (`idpessoa`),
+  CONSTRAINT `fk_clientes_pessoas1` FOREIGN KEY (`idpessoa`) REFERENCES `pessoas` (`idpessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -181,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-21 18:00:44
+-- Dump completed on 2018-04-21 21:40:39

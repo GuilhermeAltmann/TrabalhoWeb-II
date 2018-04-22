@@ -11,8 +11,12 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Cadastro de contato</a>
-        <a class="nav-link" href="#">Cadastro de cliente</a>
-        <a class="nav-link" href="#">Cadastro de médico</a>
+      </li>
+      <li class="nav-item">
+      	<a class="nav-link" href="#">Cadastro de cliente</a>
+      </li>
+      <li class="nav-item">
+      	<a class="nav-link" href="#">Cadastro de médico</a>
       </li>
     </ul>
   </div>
