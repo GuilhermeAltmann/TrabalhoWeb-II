@@ -24,7 +24,7 @@ public class PessoaDao extends DaoCore{
 		String sql =
 				   "insert into pessoas" +
 				   "(nome, cpf, rg)" +
-				   " values (?, ?, ?, ?, ?)";
+				   " values (?, ?, ?)";
 		
 		try {
 			

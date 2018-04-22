@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import classes.Cliente;
 import classes.Pessoa;
+import dao.ClienteDao;
 import dao.PessoaDao;
 
 @WebServlet("/cadastrarcliente")
@@ -29,5 +30,9 @@ public class CadastrarCliente extends HttpServlet{
 		Cliente cli = new Cliente();
 		cli.setPessoa(pes);
 		
+		ClienteDao daoc = new ClienteDao();
+		daoc.adiciona(cli);
+		
+		resp.sendRedirect("listaClientes.jsp");
 	}
 }
