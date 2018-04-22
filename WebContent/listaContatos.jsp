@@ -7,7 +7,7 @@
 	<section class="container-fluid">
 		<div class="row">
 			<div class="col">
-				<h2>Lista de Clientes</h2>
+				<h2>Lista de Contatos</h2>
 			</div>
 			<div class="col">
 				<a class="btn btn-success  float-right" href="cadastroContato.jsp" role="button">Adicionar Contato</a>

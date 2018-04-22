@@ -34,6 +34,6 @@ public class CadastrarContato extends HttpServlet{
 		ContatoDao daoc = new ContatoDao();
 		daoc.adiciona(con);
 		
-		resp.sendRedirect("listaClientes.jsp");
+		resp.sendRedirect("listaContatos.jsp");
 	}
 }

@@ -1,9 +1,12 @@
+<%@ page import="java.util.*,
+			classes.*,
+			dao.*"%>
 <%@ include file="header.jsp"%>
 <body>
 	<%@ include file="menu.jsp"%>
 	<section class="container-fluid">
 		<h2>Cadastro de Contatos</h2>
-		<form action="cadastrarcliente" method="post">
+		<form action="cadastrarcontato" method="post">
 		  <div class="form-group">
 		    <label for="nome">Parentesco</label>
 		    <input type="text" class="form-control" id="parentesco" name="parentesco" placeholder="Pai">
@@ -23,7 +26,15 @@
 		  <div class="form-group">
 		    <label for="idpessoa">Pessoa</label>
 		    <select class="form-control" id="idpessoa" name="idpessoa">
-		      
+		      <%
+					PessoaDao dao = new PessoaDao();
+					List<Pessoa> pessoas = dao.getLista();
+					for (Pessoa pes : pessoas) {
+				%>
+					<option value="<%=pes.getId()%>"><%=pes.getNome()%></option>
+				<%
+					}
+				%>
 		    </select>
 		  </div>
 		  <button type="submit" class="btn btn-primary">Salvar Contato</button>
