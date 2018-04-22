@@ -13,7 +13,7 @@
         <a class="nav-link" href="#">Cadastro de contato</a>
       </li>
       <li class="nav-item">
-      	<a class="nav-link" href="#">Cadastro de cliente</a>
+      	<a class="nav-link" href="listaClientes.jsp">Cadastro de cliente</a>
       </li>
       <li class="nav-item">
       	<a class="nav-link" href="#">Cadastro de médico</a>

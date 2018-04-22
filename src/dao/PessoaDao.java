@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.mysql.jdbc.Statement;
@@ -33,11 +34,26 @@ public class PessoaDao extends DaoCore{
 			stmt.setString(2, pes.getCpf());
 			stmt.setString(3, pes.getRg());
 			
+			int affectedRows = stmt.executeUpdate();
+			
+			if (affectedRows == 0) {
+				
+	            throw new SQLException("Falha criação pessoa");
+	        }
+			
+			try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+	            if (generatedKeys.next()) {
+	                
+	            	return generatedKeys.getInt(1);
+	            }
+	            else {
+	                throw new SQLException("Falha criação pessoa. Pessoa sem ID");
+	            }
+	        }
 		}catch(SQLException e) {
 			
 			throw new RuntimeException(e);
 		}
 		
-		return 0;
 	}
 }
