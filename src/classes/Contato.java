@@ -4,7 +4,7 @@ public class Contato {
 
 	private int id;
 	private String parentesco;
-	private int telefone;
+	private String telefone;
 	private String endereco;
 	private String email;
 	private Pessoa pessoa;
@@ -21,10 +21,10 @@ public class Contato {
 	public void setParentesco(String parentesco) {
 		this.parentesco = parentesco;
 	}
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 	public String getEndereco() {
