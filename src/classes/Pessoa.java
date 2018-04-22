@@ -5,7 +5,7 @@ public class Pessoa {
 	private int id;
 	private String nome;
 	private String rg;
-	private int cpf;
+	private String cpf;
 	
 	public String getRg() {
 		return rg;
@@ -13,10 +13,10 @@ public class Pessoa {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	public int getId() {

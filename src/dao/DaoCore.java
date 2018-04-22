@@ -7,7 +7,7 @@ import database.ConnectionFactory;
 public class DaoCore {
 
 	// a conexão com o banco de dados
-	private Connection connection;
+	protected Connection connection;
 
 	public DaoCore() {
 		
