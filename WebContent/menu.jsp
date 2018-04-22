@@ -10,7 +10,7 @@
         <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Cadastro de contato</a>
+        <a class="nav-link" href="listaContatos.jsp">Cadastro de contato</a>
       </li>
       <li class="nav-item">
       	<a class="nav-link" href="listaClientes.jsp">Cadastro de cliente</a>
