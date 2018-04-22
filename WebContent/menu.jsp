@@ -16,6 +16,9 @@
       	<a class="nav-link" href="listaClientes.jsp">Cadastro de cliente</a>
       </li>
       <li class="nav-item">
+      	<a class="nav-link" href="listaEspecialidades.jsp">Cadastro de especialidade</a>
+      </li>
+      <li class="nav-item">
       	<a class="nav-link" href="#">Cadastro de médico</a>
       </li>
     </ul>
