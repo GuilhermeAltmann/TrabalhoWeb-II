@@ -7,12 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import classes.Cliente;
-import classes.Contato;
 import classes.Especialidade;
-import classes.Pessoa;
-import dao.ClienteDao;
-import dao.ContatoDao;
 import dao.EspecialidadeDao;
 
 
